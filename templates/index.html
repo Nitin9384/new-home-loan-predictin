@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
+  <h1>Bad Loan Prediction Machine Learning Model</h1>
+  <meta charset="utf-8">
+  <title>Bad Loan Prediction Machine Learning Model</title>
+</head>
+
+<body>
+  {%block content%}
+  <form action="/result" method="POST">
+    <div class="columns"></div>
+    <b>term:</b> <select name="term" style="margin-top:30px" required>
+      <option value=36>36</option>
+      <option value=60>60</option>
+    </select>
+    <p>&nbsp</p>
+    <b>loan_amnt:</b>
+    <input type="number" name="loan_amnt" required>
+    <p>&nbsp</p>
+    <b>int_rate:</b>
+    <input type="number" name="int_rate" required>
+    <p>&nbsp</p>
+    <b>emp_length:</b>
+    <input type="number" name="emp_length" required>
+    <p>&nbsp</p>
+    <b>annual_inc:</b>
+    <input type="number" name="annual_inc" required>
+    <p>&nbsp</p>
+    <b>verification_status:</b><select name="verification_status" style="margin-top:30px" required>
+      <option value="verified">verified</option>
+      <option value="not verified">not verified</option>
+    </select>
+    <p>&nbsp</p>
+    <b>home_ownership:</b>
+    <select name="home_ownership" style="margin-top:30px" required>
+      <option value="RENT">RENT</option>
+      <option value="OWN">OWN</option>
+      <option value="MORTGAGE">MORTGAGE</option>
+      <option value="OTHER">OTHER</option>
+      <option value="NONE">NONE</option>
+      <option value="ANY">ANY</option>
+    </select>
+
+    <p>&nbsp</p>
+    <b>purpose:</b>
+    <select name="purpose" style="margin-top:30px" required>
+      <option value="credit_card">credit_card</option>
+      <option value="car">car</option>
+      <option value="small_business">small_business</option>
+      <option value="other ">other</option>
+      <option value="wedding">weddingr</option>
+      <option value="debt_consolidation">debt_consolidation</option>
+      <option value="home_improvement">home_improvement</option>
+      <option value="major_purchase">major_purchase</option>
+      <option value="medical">medical</option>
+      <option value="moving">moving</option>
+      <option value="vacation">vacation</option>
+      <option value="house">house</option>
+      <option value="renewable_energy">renewable_energy</option>
+      <option value="educational">educational</option>
+    </select>
+
+    <p>&nbsp</p>
+    <b>dti:</b>
+    <input type="number" name="dti" style="margin-top:20px" required>
+
+    <p>&nbsp</p>
+    <b>delinq_2yrs:</b>
+    <input type="number" name="delinq_2yrs" style="margin-top:20px" required>
+
+    <p>&nbsp</p>
+    <b>revol_util:</b>
+    <input type="number" name="revol_util" style="margin-top:20px" required>
+
+    <p>&nbsp</p>
+    <b>total_acc:</b>
+    <input type="number" name="total_acc" style="margin-top:20px" required>
+
+    <p>&nbsp</p>
+    <b>longest_credit_length:</b>
+    <input type="number" name="longest_credit_length" style="margin-top:20px" required>
+
+
+    <button type="submit" class="btn btn-primary" id="predict">Predict</button>
+  </form>
+  {%endblock%}
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</html>
